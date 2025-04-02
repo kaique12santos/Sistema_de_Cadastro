@@ -26,6 +26,10 @@ Este sistema completo de gerenciamento de produtos e clientes foi desenvolvido c
 
 ![Screenshot do Projeto]<a href="https://ibb.co/nqtG3HjP"><img src="https://i.ibb.co/Y4wCDzh0/Captura-de-Tela-do-projeto.png" alt="Captura-de-Tela-do-projeto" border="0"></a>
 
+## Demo do Sistema Online para Teste 
+
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://sistema-de-cadastro-g6hf.onrender.com/)
+
 ## 💻 Tecnologias Utilizadas
 
 - **Backend**:
