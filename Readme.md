@@ -281,10 +281,11 @@ Este projeto está licenciado sob a [licença MIT](LICENSE) - veja o arquivo LIC
 ## 👨‍💻 Autor
 
 **Kaique Caitano dos Santos**
-**Luiz Gimenes**
 
 * GitHub: [@kaique12santos](https://github.com/kaique12santos)
 * LinkedIn: [Kaique Caitano](https://www.linkedin.com/in/kaique-caitano-b68b902ba/)
+
+**Luiz Carlos Gimenes Fernandes de Sousa**
 
 ---
 
