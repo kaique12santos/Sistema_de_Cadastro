@@ -12,7 +12,7 @@
                     <th>Nome</th>
                     <th>Preço</th>
                     <th>Estoque</th>
-                    <th>Ações</th>
+                    <th class="acoes">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,8 +20,8 @@
                     <tr>
                         <td><%= produto.id %> </td>
                         <td><%= produto.nome %></td>
-                        <td class="texto-direita">R$ <%= produto.preco.toFixed(2).replace('.', ',') %></td>
-                        <td class="texto-direita"><%= produto.estoque %></td>
+                        <td class="texto-esquerda">R$ <%= produto.preco.toFixed(2).replace('.', ',') %></td>
+                        <td class="texto-esquerda"><%= produto.estoque %></td>
                         <td class="acoes">
                             <a href="/produtos/<%= produto.id %>/mostrar" class="botao botao-pequeno">Ver</a>
                             <a href="/produtos/<%= produto.id %>/editar" class="botao botao-pequeno botao-secundario">Editar</a>

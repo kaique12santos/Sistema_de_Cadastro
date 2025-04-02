@@ -24,19 +24,6 @@
     </header>
 
     <main class="container">
-        <!-- Exibição de mensagens flash (se implementadas) -->
-        <% if (locals.messages && messages.error) { %>
-            <div class="alerta alerta-erro">
-                <%= messages.error %>
-            </div>
-        <% } %>
-        
-        <% if (locals.messages && messages.success) { %>
-            <div class="alerta alerta-sucesso">
-                <%= messages.success %>
-            </div>
-        <% } %>
-        
         <%- body %>
     </main>
 

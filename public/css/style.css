@@ -1,4 +1,4 @@
-/* Estilos básicos */
+
 html, body {
   height: 100%;
 }
@@ -335,27 +335,6 @@ nav ul li a:hover {
   border-top: 1px solid #eee;
 }
 
-/* Alertas */
-.alerta {
-  padding: 1rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  transition: opacity 0.5s;
-  font-weight: 500;
-  position: relative;
-}
-
-.alerta-erro {
-  background-color: #fee2e2;
-  color: #b91c1c;
-  border: 1px solid #f87171;
-}
-
-.alerta-sucesso {
-  background-color: #d1fae5;
-  color: #065f46;
-  border: 1px solid #34d399;
-}
 
 /* Detalhes */
 .cliente-detalhes, .produto-detalhes {
