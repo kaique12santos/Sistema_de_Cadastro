@@ -1,0 +1,33 @@
+<div class="produto-form">
+    <h2>Novo Produto</h2>
+    
+    <% if (locals.error) { %>
+        <div class="alerta alerta-erro">
+            <%= error %>
+        </div>
+    <% } %>
+    
+    <form action="/produtos" method="POST">
+        <div class="grupo-form">
+            <label for="nome">Nome do Produto</label>
+            <input type="text" id="nome" name="nome" value="<%= locals.produto ? produto.nome : '' %>" required>
+        </div>
+        
+        <div class="grupo-form">
+            <label for="preco">Preço (R$)</label>
+            <input type="number" id="preco" name="preco" step="0.01" min="0" 
+                   value="<%= locals.produto ? produto.preco : '' %>" required class="campo-preco">
+        </div>
+        
+        <div class="grupo-form">
+            <label for="estoque">Quantidade em Estoque</label>
+            <input type="number" id="estoque" name="estoque" min="0" 
+                   value="<%= locals.produto ? produto.estoque : '' %>" required>
+        </div>
+        
+        <div class="acoes-form">
+            <a href="/produtos" class="botao botao-secundario">Cancelar</a>
+            <button type="submit" class="botao botao-primario">Salvar Produto</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+<div class="produto-detalhes">
+    <h2>Detalhes do Produto</h2>
+    
+    <div class="card-detalhes">
+
+        
+        <div class="linha-detalhes">
+            <span class="rotulo">Nome:</span>
+            <span class="valor"><%= produto.nome %></span>
+        </div>
+        
+        <div class="linha-detalhes">
+            <span class="rotulo">Preço:</span>
+            <span class="valor">R$ <%= produto.preco.toFixed(2).replace('.', ',') %></span>
+        </div>
+        
+        <div class="linha-detalhes">
+            <span class="rotulo">Estoque:</span>
+            <span class="valor"><%= produto.estoque %> unidades</span>
+        </div>
+    </div>
+    
+    <div class="acoes-detalhes">
+        <a href="/produtos" class="botao botao-secundario">Voltar</a>
+        <a href="/produtos/<%= produto.id %>/editar" class="botao botao-primario">Editar</a>
+        <form action="/produtos/<%= produto.id %>/deletar?_method=DELETE" method="POST" style="display: inline;">
+            <button type="submit" class="botao botao-perigo" 
+                    onclick="return confirm('Tem certeza que deseja excluir este produto?')">
+                Excluir
+            </button>
+        </form>
+    </div>
+</div>

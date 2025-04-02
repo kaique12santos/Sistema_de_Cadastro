@@ -1,0 +1,558 @@
+/* Estilos básicos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #9b87f5;
+  --primary-hover: #8c74f2;
+  --primary-light: #e5deff;
+  --secondary: #6e59a5;
+  --secondary-hover: #5c4993;
+  --accent: #ff719a;
+  --accent-hover: #ff5288;
+  --destructive: #ff5657;
+  --destructive-hover: #e63e3f;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --background: #f8f9fc;
+  --foreground: #1a1f2c;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --muted: #8e9196;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--foreground);
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Cabeçalho e navegação */
+header {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: white;
+  padding: 1.2rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(155, 135, 245, 0.2);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1.8rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Página inicial */
+.pagina-inicial {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.pagina-inicial h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+  position: relative;
+  font-weight: 600;
+}
+
+.pagina-inicial h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  margin: 0.7rem auto;
+  border-radius: 4px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 350px;
+  transition: all 0.4s ease;
+  border: 1px solid var(--border);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(155, 135, 245, 0.15);
+  border-color: var(--primary-light);
+}
+
+.card h3 {
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 1.8rem;
+  line-height: 1.7;
+}
+
+/* Botões */
+.botao {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(155, 135, 245, 0.2);
+}
+
+.botao:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(155, 135, 245, 0.3);
+}
+
+.botao-primario {
+  background-color: var(--primary);
+}
+
+.botao-primario:hover {
+  background-color: var(--primary-hover);
+}
+
+.botao-secundario {
+  background-color: var(--secondary);
+}
+
+.botao-secundario:hover {
+  background-color: var(--secondary-hover);
+}
+
+.botao-perigo {
+  background-color: var(--destructive);
+}
+
+.botao-perigo:hover {
+  background-color: var(--destructive-hover);
+}
+
+.botao-pequeno {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* Tabelas */
+.cabecalho-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.cabecalho-lista h2 {
+  font-size: 1.8rem;
+  color: var(--foreground);
+  position: relative;
+  font-weight: 600;
+}
+
+.cabecalho-lista h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  margin-top: 0.7rem;
+  border-radius: 4px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabela th,
+.tabela td {
+  padding: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabela th {
+  background-color: #f9fafc;
+  font-weight: 600;
+  color: var(--foreground);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.tabela tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela tr:hover {
+  background-color: #f9faff;
+}
+
+.tabela .texto-direita {
+  text-align: right;
+}
+
+.tabela .acoes {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.linha-hover {
+  background-color: #f9faff;
+}
+
+/* Formulários */
+.formulario-cliente, .formulario-produto {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+}
+
+.formulario-cliente h2, .formulario-produto h2 {
+  color: var(--foreground);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+  font-weight: 600;
+}
+
+.formulario-cliente h2:after, .formulario-produto h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  margin-top: 0.7rem;
+  border-radius: 4px;
+}
+
+.grupo-form {
+  margin-bottom: 1.8rem;
+}
+
+.grupo-form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.grupo-form input,
+.grupo-form select,
+.grupo-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background-color: #fafbff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.grupo-form input:focus,
+.grupo-form select:focus,
+.grupo-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(155, 135, 245, 0.1);
+  background-color: white;
+}
+
+.acoes-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Alertas */
+.alerta {
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.8rem;
+  transition: all 0.5s;
+  font-weight: 500;
+  position: relative;
+}
+
+.alerta-erro {
+  background-color: #fff1f1;
+  color: var(--destructive);
+  border: 1px solid #ffcaca;
+}
+
+.alerta-sucesso {
+  background-color: #f0fdf4;
+  color: #065f46;
+  border: 1px solid #d1fae5;
+}
+
+/* Detalhes */
+.cliente-detalhes, .produto-detalhes {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cliente-detalhes h2, .produto-detalhes h2 {
+  color: var(--foreground);
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  position: relative;
+  font-weight: 600;
+}
+
+.cliente-detalhes h2:after, .produto-detalhes h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  margin-top: 0.7rem;
+  border-radius: 4px;
+}
+
+.card-detalhes {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border);
+}
+
+.linha-detalhes {
+  display: flex;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.2rem;
+}
+
+.linha-detalhes:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.rotulo {
+  flex: 0 0 140px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.valor {
+  flex: 1;
+  color: var(--muted);
+}
+
+.acoes-detalhes {
+  display: flex;
+  gap: 1.2rem;
+}
+
+/* Mensagem vazio */
+.mensagem-vazio {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+}
+
+.mensagem-vazio p {
+  color: var(--muted);
+  margin-bottom: 1.8rem;
+  font-size: 1.1rem;
+}
+
+/* Rodapé */
+footer {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: white;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+footer p {
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+/* Página de erro */
+.erro-404 {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.erro-404 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.erro-404 p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  nav ul {
+    margin-top: 1.2rem;
+  }
+
+  .cards {
+    gap: 1.5rem;
+  }
+
+  .acoes-form {
+    flex-direction: column;
+  }
+
+  .acoes-form .botao {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tabela {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .acoes-detalhes {
+    flex-direction: column;
+  }
+  
+  .acoes-detalhes .botao, 
+  .acoes-detalhes form {
+    width: 100%;
+  }
+  
+  .acoes-detalhes form button {
+    width: 100%;
+  }
+}
+
+/* Estilos específicos para páginas de cliente */
+.pagina-clientes h2 {
+  color: var(--foreground);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.4s ease-out;
+}
+
+/* Efeitos de glassmorphism para seções especiais */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

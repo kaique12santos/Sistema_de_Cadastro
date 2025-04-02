@@ -1,0 +1,27 @@
+<div class="cliente-detalhes">
+    <h2>Detalhes do Cliente</h2>
+    
+    
+    <div class="card-detalhes">
+        <div class="linha-detalhes">
+            <span class="rotulo">Nome:</span>
+            <span class="valor"><%= cliente.nome %></span>
+        </div>
+        
+        <div class="linha-detalhes">
+            <span class="rotulo">Email:</span>
+            <span class="valor"><%= cliente.email %></span>
+        </div>
+    </div>
+    
+    <div class="acoes-detalhes">
+        <a href="/clientes" class="botao botao-secundario">Voltar</a>
+        <a href="/clientes/<%= cliente.id %>/editar" class="botao botao-primario">Editar</a>
+        <form action="/clientes/<%= cliente.id %>/deletar?_method=DELETE" method="POST" style="display: inline;">
+            <button type="submit" class="botao botao-perigo" 
+                    onclick="return confirm('Tem certeza que deseja excluir este cliente?')">
+                Excluir
+            </button>
+        </form>
+    </div>
+</div>

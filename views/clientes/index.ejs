@@ -1,0 +1,43 @@
+<div class="pagina-clientes">
+    <div class="cabecalho-lista">
+        <h2>Lista de Clientes</h2>
+        <a href="/clientes/novo" class="botao botao-primario">Novo Cliente</a>
+    </div>
+    
+    <% if (clientes && clientes.length > 0) { %>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th class="acoes">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% clientes.forEach(cliente => { %>
+                    <tr>
+                        <td><%= cliente.id %></td>
+                        <td><%= cliente.nome %></td>
+                        <td><%= cliente.email %></td>
+                        <td class="acoes">
+                            <a href="/clientes/<%= cliente.id %>/mostrar" class="botao botao-pequeno">Ver</a>
+                            <a href="/clientes/<%= cliente.id %>/editar" class="botao botao-pequeno botao-secundario">Editar</a>
+                            <form action="/clientes/<%= cliente.id %>/deletar?_method=DELETE" method="POST" style="display: inline;">
+                                <button type="submit" class="botao botao-pequeno botao-perigo" 
+                                    onclick="return confirm('Tem certeza que deseja excluir este cliente?')">
+                                    Excluir
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <div class="mensagem-vazio">
+            <p>Nenhum cliente cadastrado ainda.</p>
+            <a href="/clientes/novo" class="botao botao-primario">Cadastrar Primeiro Cliente</a>
+        </div>
+    <% } %>
+</div>
