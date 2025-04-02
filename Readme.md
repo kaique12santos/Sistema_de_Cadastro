@@ -278,7 +278,7 @@ A validação acontece em múltiplas camadas:
 
 Este projeto está licenciado sob a [licença MIT](LICENSE) - veja o arquivo LICENSE para detalhes.
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
 **Kaique Caitano dos Santos**
 
